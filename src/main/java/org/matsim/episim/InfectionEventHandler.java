@@ -306,38 +306,38 @@ public final class InfectionEventHandler implements ActivityEndEventHandler, Per
 //		EpisimPerson p10 = this.personMap.get(Id.createPersonId("16552020_238"));
 		
 //		Heinsberg
-//		EpisimPerson p1 = this.personMap.get(Id.createPersonId("52525095_1512"));
-//		EpisimPerson p2 = this.personMap.get(Id.createPersonId("52525095_1534"));
-//		EpisimPerson p3 = this.personMap.get(Id.createPersonId("52525095_1726"));
-//		EpisimPerson p4 = this.personMap.get(Id.createPersonId("52525095_151"));
-//		EpisimPerson p5 = this.personMap.get(Id.createPersonId("52525095_30"));
-//		EpisimPerson p6 = this.personMap.get(Id.createPersonId("52525095_586"));
-//		EpisimPerson p7 = this.personMap.get(Id.createPersonId("52525095_2250"));
-//		EpisimPerson p8 = this.personMap.get(Id.createPersonId("52525095_292"));
-//		EpisimPerson p9 = this.personMap.get(Id.createPersonId("52525105_18"));
-//		EpisimPerson p10 = this.personMap.get(Id.createPersonId("52525095_634"));
+		EpisimPerson p1 = this.personMap.get(Id.createPersonId("52525095_1512"));
+		EpisimPerson p2 = this.personMap.get(Id.createPersonId("52525095_1534"));
+		EpisimPerson p3 = this.personMap.get(Id.createPersonId("52525095_1726"));
+		EpisimPerson p4 = this.personMap.get(Id.createPersonId("52525095_151"));
+		EpisimPerson p5 = this.personMap.get(Id.createPersonId("52525095_30"));
+		EpisimPerson p6 = this.personMap.get(Id.createPersonId("52525095_586"));
+		EpisimPerson p7 = this.personMap.get(Id.createPersonId("52525095_2250"));
+		EpisimPerson p8 = this.personMap.get(Id.createPersonId("52525095_292"));
+		EpisimPerson p9 = this.personMap.get(Id.createPersonId("52525105_18"));
+		EpisimPerson p10 = this.personMap.get(Id.createPersonId("52525095_634"));
 		
-//		p1.setDiseaseStatus(0, DiseaseStatus.infectedButNotContagious);
-//		p2.setDiseaseStatus(0, DiseaseStatus.infectedButNotContagious);
-//		p3.setDiseaseStatus(0, DiseaseStatus.infectedButNotContagious);
-//		p4.setDiseaseStatus(0, DiseaseStatus.infectedButNotContagious);
-//		p5.setDiseaseStatus(0, DiseaseStatus.infectedButNotContagious);
-//		p6.setDiseaseStatus(0, DiseaseStatus.infectedButNotContagious);
-//		p7.setDiseaseStatus(0, DiseaseStatus.infectedButNotContagious);
-//		p8.setDiseaseStatus(0, DiseaseStatus.infectedButNotContagious);
-//		p9.setDiseaseStatus(0, DiseaseStatus.infectedButNotContagious);
-//		p10.setDiseaseStatus(0, DiseaseStatus.infectedButNotContagious);
+		p1.setDiseaseStatus(0, DiseaseStatus.infectedButNotContagious);
+		p2.setDiseaseStatus(0, DiseaseStatus.infectedButNotContagious);
+		p3.setDiseaseStatus(0, DiseaseStatus.infectedButNotContagious);
+		p4.setDiseaseStatus(0, DiseaseStatus.infectedButNotContagious);
+		p5.setDiseaseStatus(0, DiseaseStatus.infectedButNotContagious);
+		p6.setDiseaseStatus(0, DiseaseStatus.infectedButNotContagious);
+		p7.setDiseaseStatus(0, DiseaseStatus.infectedButNotContagious);
+		p8.setDiseaseStatus(0, DiseaseStatus.infectedButNotContagious);
+		p9.setDiseaseStatus(0, DiseaseStatus.infectedButNotContagious);
+		p10.setDiseaseStatus(0, DiseaseStatus.infectedButNotContagious);
 		
-		Object[] personArray = this.personMap.values().toArray();
-		do {
-			EpisimPerson randomPerson = (EpisimPerson) personArray[rnd.nextInt(personArray.length)];
-			if (randomPerson.getDiseaseStatus() == DiseaseStatus.susceptible) {
-				randomPerson.setDiseaseStatus(0, DiseaseStatus.infectedButNotContagious);
-				log.warn(" person " + randomPerson.getPersonId() + " has initial infection");
-				this.cnt--;
-			}
-
-		} while (this.cnt > 0);
+//		Object[] personArray = this.personMap.values().toArray();
+//		do {
+//			EpisimPerson randomPerson = (EpisimPerson) personArray[rnd.nextInt(personArray.length)];
+//			if (randomPerson.getDiseaseStatus() == DiseaseStatus.susceptible) {
+//				randomPerson.setDiseaseStatus(0, DiseaseStatus.infectedButNotContagious);
+//				log.warn(" person " + randomPerson.getPersonId() + " has initial infection");
+//				this.cnt--;
+//			}
+//
+//		} while (this.cnt > 0);
 	}
 
 
