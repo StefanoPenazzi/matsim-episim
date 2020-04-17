@@ -71,7 +71,7 @@ public final class SchoolClosure implements BatchRun<SchoolClosure.Params> {
 
 	public static final class Params {
 
-		@IntParameter({-5, 5})
+		@IntParameter({-5, 0, 5})
 		int offset;
 
 		@Parameter({1.0, 0.5, 0.1})
