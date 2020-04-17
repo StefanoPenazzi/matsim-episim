@@ -43,22 +43,22 @@ public final class SchoolClosure implements BatchRun<SchoolClosure.Params> {
 				.setContactIntensity(3.0);
 
 		com.typesafe.config.Config policyConf = FixedPolicy.config()
-				.restrict(13 + params.offset, 0.9, "leisure")
-				.restrict(13 + params.offset, 0.1, "educ_primary", "educ_kiga")
-				.restrict(13 + params.offset, 0., "educ_secondary", "educ_higher")
-				.restrict(13 + params.offset, params.remainingFractionLeisure, "leisure")
-				.restrict(13 + params.offset, params.remainingFractionWork, "work")
-				.restrict(13 + params.offset, params.remainingFractionShoppingBusinessErrands, "shopping", "errands", "business")
-				.restrict(65 + params.offset, params.remainingFractionKiga, "educ_kiga")
-				.restrict(65 + params.offset, params.remainingFractionPrima, "educ_primary")
-				.restrict(65 + params.offset, params.remainingFractionSecon, "educ_secondary")
+				.restrict(12 + params.offset, 0.9, "leisure")
+				.restrict(12 + params.offset, 0.1, "educ_primary", "educ_kiga")
+				.restrict(12 + params.offset, 0., "educ_secondary", "educ_higher")
+				.restrict(12 + params.offset, params.remainingFractionLeisure, "leisure")
+				.restrict(12 + params.offset, params.remainingFractionWork, "work")
+				.restrict(12 + params.offset, params.remainingFractionShoppingBusinessErrands, "shopping", "errands", "business")
+				.restrict(66 + params.offset, params.remainingFractionKiga, "educ_kiga")
+				.restrict(66 + params.offset, params.remainingFractionPrima, "educ_primary")
+				.restrict(66 + params.offset, params.remainingFractionSecon, "educ_secondary")
 				.build();
 
 		String policyFileName = "input/policy" + id + ".conf";
 		episimConfig.setOverwritePolicyLocation(policyFileName);
 		episimConfig.setPolicy(FixedPolicy.class, policyConf);
 
-		config.plans().setInputFile("../he_entirePopulation_noPlans.xml.gz");
+		config.plans().setInputFile("../he_entirePopulation_noPlans_withDistricts.xml.gz");
 
 		return config;
 	}
