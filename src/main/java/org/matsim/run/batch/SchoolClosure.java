@@ -19,12 +19,12 @@ public final class SchoolClosure implements BatchRun<SchoolClosure.Params> {
 		Config config = ConfigUtils.createConfig(new EpisimConfigGroup());
 		EpisimConfigGroup episimConfig = ConfigUtils.addOrGetModule(config, EpisimConfigGroup.class);
 
-		episimConfig.setInputEventsFile("../be_snz_episim_events.xml.gz");
+		episimConfig.setInputEventsFile("../mu_snz_episim_events.xml.gz");
 		episimConfig.setFacilitiesHandling(EpisimConfigGroup.FacilitiesHandling.snz);
 
 		episimConfig.setSampleSize(0.25);
 		episimConfig.setCalibrationParameter(0.000002);
-		episimConfig.setInitialInfections(5);
+		episimConfig.setInitialInfections(3);
 		
 		SnzScenario.addParams(episimConfig);
 		SnzScenario.setContactIntensities(episimConfig);
@@ -46,7 +46,7 @@ public final class SchoolClosure implements BatchRun<SchoolClosure.Params> {
 		episimConfig.setPolicy(FixedPolicy.class, policyConf);
 
 
-		config.plans().setInputFile("../be_entirePopulation_noPlans_withDistrict.xml.gz");
+		config.plans().setInputFile("../mu_entirePopulation_noPlans_withDistrict.xml.gz");
 
 		return config;
 	}
