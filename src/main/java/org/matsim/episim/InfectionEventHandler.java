@@ -298,7 +298,7 @@ public final class InfectionEventHandler implements ActivityEndEventHandler, Per
 		Object[] personArray = this.personMap.values().toArray();
 		do {
 			EpisimPerson randomPerson = (EpisimPerson) personArray[rnd.nextInt(personArray.length)];
-			if (randomPerson.getDiseaseStatus() == DiseaseStatus.susceptible) {
+			if (randomPerson.getDiseaseStatus() == DiseaseStatus.susceptible && randomPerson.getAttributes().getAttribute("district").equals("München")) {
 				randomPerson.setDiseaseStatus(0, DiseaseStatus.infectedButNotContagious);
 				log.warn(" person " + randomPerson.getPersonId() + " has initial infection");
 				this.cnt--;
