@@ -683,7 +683,17 @@ public final class InfectionEventHandler implements ActivityEndEventHandler, Per
 				numInfections--;
 			}
 		}
+//		
+//		while ( initialInfectionsLeft > 0) {
+//			EpisimPerson randomPerson = candidates.get(rnd.nextInt(candidates.size()));
+//			if (randomPerson.getDiseaseStatus() == DiseaseStatus.susceptible) {
+//				randomPerson.setDiseaseStatus(now, DiseaseStatus.infectedButNotContagious);
+//				log.warn("Person {} has initial infection.", randomPerson.getPersonId());
+//				initialInfectionsLeft--;
+//			}
+//		}
 
+		System.out.println("");
 	}
 
 	/**
